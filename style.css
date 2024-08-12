@@ -10,36 +10,64 @@ body {
     color: #FFFFFF;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 1000px;
+    display: flex;
+    max-width: 1200px;
     width: 100%;
-    text-align: center;
-    padding: 20px;
     background-color: #282828;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009688;
 }
 
 .imagem img {
-    width: 100px; 
+    width: 80%; 
     height: auto;
     border-radius: 50%;
-    margin-bottom: 20px;
     opacity: 0.85; 
 }
 
-h1 {
+.right-side {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-side a {
+    color: #009688;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.right-side a:hover {
+    color: #00796B;
+}
+
+.inicio h1 {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 10px;
     color: #009688;
 }
 
-h2 {
+.inicio h2 {
     font-size: 28px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -72,45 +100,71 @@ p {
     color: #009688;
 }
 
-.linguagens-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 10px;
+.linguagens {
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
-    position: relative;
+    overflow: hidden;
 }
 
 .linguagens {
-    display: inline-block;
-    animation: scroll 20s linear infinite;
+    display: flex;
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Adiciona um espaçamento entre as linguagens */
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 .linguagens div {
-    display: inline-block;
+    display: flex;
     align-items: center;
+    justify-content: center;  /* Centraliza o conteúdo dentro de cada item */
     gap: 10px;
-    padding: 10px 20px;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 500;
-    white-space: nowrap;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.linguagens div:nth-child(1) {
+    background-color: #e34c26; /* Cor para HTML */
+    transition: background-color 2s, transform 5; /* Adiciona transição suave */
+}
+
+.linguagens div:nth-child(1):hover {
+    background-color: #973117; /* Cor mais escura para o hover */
+    transform: translateY(-5px); /* Move o elemento ligeiramente para cima */
+}
+
+
+.linguagens div:nth-child(2) {
+    background-color: #2965f1; /* Cor para CSS */
+    transition:background-color 2s, transform 5;
+}
+
+.linguagens div:nth-child(2):hover {
+    background-color: #193d91; /* Cor para CSS */
+    transform: translateY(-5px);
+}
+
+.linguagens div:nth-child(3) {
+    background-color: #f0db4f; /* Cor para JavaScript */
+    color: #383106;
+}
+
+.linguagens div:nth-child(4) {
+    background-color: blueviolet;
+}
+
+.linguagens div i {
+    font-size: 28px;
 }
 
 .linguagens div i {
     font-size: 28px;
     margin-right: 10px;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
 }
 
 .botao {
@@ -123,6 +177,7 @@ p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    align-self: flex-start;
     margin-top: 40px;
 }
 
