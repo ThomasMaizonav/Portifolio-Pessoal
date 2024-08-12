@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #282828;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.imagem img {
+    width: 100px; 
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    opacity: 0.85; 
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #009688;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #B3B3B3;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #CCCCCC;
+}
+
+.logos i {
+    font-size: 36px;
+    margin: 0 10px;
+    color: #FFFFFF;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.logos i:hover {
+    color: #009688;
+}
+
+.linguagens-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.linguagens {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+.linguagens div {
+    display: inline-block;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.linguagens div i {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.botao {
+    background-color: #009688;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 40px;
+}
+
+.botao:hover {
+    background-color: #00796B;
+    transform: translateY(-3px);
+}
