@@ -22,7 +22,7 @@ body {
     background-color: #282828;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .left-side {
@@ -102,23 +102,16 @@ p {
 
 .linguagens {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; 
+    gap: 20px; 
     margin-top: 20px;
-    overflow: hidden;
-}
-
-.linguagens {
-    display: flex;
-    justify-content: center;  /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Adiciona um espaçamento entre as linguagens */
-    margin-top: 20px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .linguagens div {
     display: flex;
     align-items: center;
-    justify-content: center;  /* Centraliza o conteúdo dentro de cada item */
+    justify-content: center;  
     gap: 10px;
     color: #FFFFFF;
     font-size: 18px;
@@ -128,43 +121,94 @@ p {
     border-radius: 50px;
 }
 
-.linguagens div:nth-child(1) {
-    background-color: #e34c26; /* Cor para HTML */
-    transition: background-color 2s, transform 5; /* Adiciona transição suave */
-}
-
-.linguagens div:nth-child(1):hover {
-    background-color: #973117; /* Cor mais escura para o hover */
-    transform: translateY(-5px); /* Move o elemento ligeiramente para cima */
-}
-
-
-.linguagens div:nth-child(2) {
-    background-color: #2965f1; /* Cor para CSS */
-    transition:background-color 2s, transform 5;
-}
-
-.linguagens div:nth-child(2):hover {
-    background-color: #193d91; /* Cor para CSS */
-    transform: translateY(-5px);
-}
-
-.linguagens div:nth-child(3) {
-    background-color: #f0db4f; /* Cor para JavaScript */
-    color: #383106;
-}
-
-.linguagens div:nth-child(4) {
-    background-color: blueviolet;
-}
-
 .linguagens div i {
     font-size: 28px;
+    opacity: 0.2;
+    transform: scale(0.5);
+    transition: opacity 0.5, transform 0.5 ease;
+}
+
+.linguagens div:hover i {
+    opacity: 1; 
+    transform: scale(1); 
 }
 
 .linguagens div i {
     font-size: 28px;
     margin-right: 10px;
+}
+
+.linguagens div:nth-child(1) {
+    background-color: #e34c26; 
+    transition: background-color 2s, transform 1s ease; 
+}
+
+.linguagens div:nth-child(1) img {
+    opacity: 0.1;
+}
+
+.linguagens div:nth-child(1):hover {
+    background-color: #973117; 
+    transform: translateX(-5px);
+}
+
+.linguagens div:nth-child(1):hover img {
+    opacity: 1;
+}
+
+.linguagens div:nth-child(2) {
+    background-color: #2965f1; 
+    transition:background-color 2s, transform 1s ease;
+}
+
+.linguagens div:nth-child(2) img {
+    opacity: 0.1;
+}
+
+.linguagens div:nth-child(2):hover {
+    background-color: #193d91;
+    transform: translateX(-5px);
+}
+
+.linguagens div:nth-child(2):hover img {
+    opacity: 1;
+}
+
+.linguagens div:nth-child(3) {
+    background-color: #f0db4f;
+    color: #383106;
+    transition:background-color 2s, transform 1s ease;
+}
+
+.linguagens div:nth-child(3) img {
+    opacity: 0.1;
+}
+
+.linguagens div:nth-child(3):hover {
+    background-color: rgb(245, 213, 3);
+    transform: translateX(-5px);
+}
+
+.linguagens div:nth-child(3):hover img {
+    opacity: 1;
+}
+
+.linguagens div:nth-child(4) {
+    background-color: blueviolet;
+    transition:background-color 2s, transform 1s ease;
+}
+
+.linguagens div:nth-child(4) img {
+    opacity: 0.2;
+}
+
+.linguagens div:nth-child(4):hover {
+    background-color: rgb(63, 18, 105);
+    transform: translateX(-5px);
+}
+
+.linguagens div:nth-child(4):hover img {
+    opacity: 1;
 }
 
 .botao {
