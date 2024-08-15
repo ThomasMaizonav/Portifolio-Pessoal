@@ -1,18 +1,13 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
-body {
+body{
     background-color: rgb(34, 34, 34);
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 0px;
 }
 
 .container {
@@ -28,9 +23,12 @@ body {
 .left-side {
     flex: 1;
     display: flex;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     background-color: #009688;
+    height: 75vh;
+    min-height: 300px;
 }
 
 .imagem img {
