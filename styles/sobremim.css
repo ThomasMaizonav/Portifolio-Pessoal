@@ -1,4 +1,14 @@
-/* Classe para inverter o layout */
+body {
+        background-color: rgb(34, 34, 34);
+        font-family: 'Poppins', sans-serif;
+        color: #FFFFFF;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 .invertido {
     flex-direction: row-reverse;
 }

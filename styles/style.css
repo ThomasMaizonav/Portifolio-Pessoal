@@ -1,23 +1,29 @@
+/* style.css */
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(34, 34, 34);
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    padding: 0px;
+    height: 100vh; /* Ajusta a altura do body para ocupar 100% da tela */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
+    width: 100vw; /* Ajusta a largura para ocupar 100% da tela */
+    height: 100vh; /* Ajusta a altura para ocupar 100% da tela */
     background-color: #282828;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow: visible;
 }
 
 .left-side {
@@ -27,15 +33,14 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #009688;
-    height: 75vh;
-    min-height: 300px;
+    height: 100%;
 }
 
 .imagem img {
-    width: 80%; 
+    width: 80%;
     height: auto;
     border-radius: 50%;
-    opacity: 0.85; 
+    opacity: 0.85;
 }
 
 .right-side {
@@ -100,8 +105,8 @@ p {
 
 .linguagens {
     display: flex;
-    justify-content: center; 
-    gap: 20px; 
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
     overflow: visible;
 }
@@ -109,7 +114,7 @@ p {
 .linguagens div {
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
     gap: 10px;
     color: #FFFFFF;
     font-size: 18px;
@@ -127,18 +132,13 @@ p {
 }
 
 .linguagens div:hover i {
-    opacity: 1; 
-    transform: scale(1); 
-}
-
-.linguagens div i {
-    font-size: 28px;
-    margin-right: 10px;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .linguagens div:nth-child(1) {
-    background-color: #e34c26; 
-    transition: background-color 2s, transform 1s ease; 
+    background-color: #e34c26;
+    transition: background-color 2s, transform 1s ease;
 }
 
 .linguagens div:nth-child(1) img {
@@ -146,7 +146,7 @@ p {
 }
 
 .linguagens div:nth-child(1):hover {
-    background-color: #973117; 
+    background-color: #973117;
     transform: translateX(-5px);
 }
 
@@ -155,8 +155,8 @@ p {
 }
 
 .linguagens div:nth-child(2) {
-    background-color: #2965f1; 
-    transition:background-color 2s, transform 1s ease;
+    background-color: #2965f1;
+    transition: background-color 2s, transform 1s ease;
 }
 
 .linguagens div:nth-child(2) img {
@@ -164,8 +164,8 @@ p {
 }
 
 .linguagens div:nth-child(2):hover {
-    background-color: #193d91;
-    transform: translateX(-5px);
+    background-color: #3c53a3;
+    transform: translateX(5px);
 }
 
 .linguagens div:nth-child(2):hover img {
@@ -174,8 +174,7 @@ p {
 
 .linguagens div:nth-child(3) {
     background-color: #f0db4f;
-    color: #383106;
-    transition:background-color 2s, transform 1s ease;
+    transition: background-color 2s, transform 1s ease;
 }
 
 .linguagens div:nth-child(3) img {
@@ -183,7 +182,7 @@ p {
 }
 
 .linguagens div:nth-child(3):hover {
-    background-color: rgb(245, 213, 3);
+    background-color: #c8af3b;
     transform: translateX(-5px);
 }
 
@@ -192,17 +191,17 @@ p {
 }
 
 .linguagens div:nth-child(4) {
-    background-color: blueviolet;
-    transition:background-color 2s, transform 1s ease;
+    background-color: #4b8bbe;
+    transition: background-color 2s, transform 1s ease;
 }
 
 .linguagens div:nth-child(4) img {
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 .linguagens div:nth-child(4):hover {
-    background-color: rgb(63, 18, 105);
-    transform: translateX(-5px);
+    background-color: #386990;
+    transform: translateX(5px);
 }
 
 .linguagens div:nth-child(4):hover img {
@@ -227,3 +226,27 @@ p {
     background-color: #00796B;
     transform: translateY(-3px);
 }
+
+.invertido {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+}
+
+.sobremim-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 200px; /* Aumente esse valor para afastar mais o texto */
+}
+
+.sobremim-section img{
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side {
+    margin-right: 80px; /* Ajuste este valor para mover mais a imagem e afastar o texto */
+}
+
