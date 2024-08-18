@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Pessoal</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/sobremim.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
@@ -23,33 +22,27 @@
                 <a href="#contato">Contato</a>
             </nav>
             <main>
-                <section id="inicio">
+                <section id="inicio"> <br>
                     <h1>Olá, sou o Thomas 👋</h1>
-                    <h2>Desenvolvedor Web</h2>
+                    <h2 id="dynamic-text">Desenvolvedor Web</h2>
                 </section>
         
                 <h3>Experiência</h3>
                 <p>Desenvolvedor web buscando oportunidades no mercado de trabalho</p>
         
                 <h3>Línguas</h3>
-                <p>🇺🇸 EN - Fluente</p>
-                <p>🇧🇷 PT-BR - Nativo</p>
+                <p><img class="country-flag" src="assets/brazil-.png" alt=""> PT-BR - Nativo</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;">100%</div>
+                    </div>
+                    <p><img class="country-flag" src="assets/united-states-of-america.png" alt=""> EN - Avançado</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
         
                 <h3>Formações</h3>
                 <p>• Cursando Análise e Desenvolvimento de Sistemas no Senai</p>
                 <p>• Estudante de JavaScript, Python, HTML e CSS</p>
-        
-                <div class="logos">
-                    <a href="">
-                    <i class="ri-instagram-fill"></i>
-                     </a>
-                    <a href="">
-                    <i class="ri-linkedin-box-fill"></i>
-                    </a>
-                    <a href="https://github.com/ThomasMaizonav">
-                    <i class="ri-github-fill"></i>
-                    </a>
-                </div>
         
                 <h3 class="minhas-linguagens" >Minhas linguagens:</h3>
                 <div class="linguagens">
@@ -70,33 +63,58 @@
                         <span>Python</span>
                     </div>
                 </div>
-        
-                <i class="ri-phone-line"></i>
-                <button class="botao">CONTATAR-ME</button> <br><br>
+
             </section>
 
-            <section id="sobremim" class="invertido">
-                <div class="left-side">
-                    <div class="imagem">   
-                        <img src="" alt="Thomas">
-                    </div>
-                </div>
-                <div class="right-side sobremim-section">
+            <section id="sobremim" class="sobre-mim">
+                <div class="sobre-mim-texto">
                     <h2>Sobre Mim</h2>
                     <h3>Olá, sou o Thomas</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolore eaque rerum itaque hic praesentium repellat officiis exercitationem, laborum corporis nihil nam? Esse exercitationem, ipsum illo voluptatem laborum eligendi asperiores.</p>
                 </div>
-            </section>            
+                <div class="sobre-mim-imagem">
+                    <img src="assets/sua-imagem.png" alt="Thomas">
+                </div>
+            </section>                                             
 
             <section id="projetos">
                 <h2>Projetos</h2>
                 <p>Texto sobre seus projetos</p>
             </section>
 
-            <section id="contato">
-                <h2>Contato</h2>
-                <p>Texto de contato</p>
+            <section id="contato" class="contato">
+                <div class="contato-container">
+                    <div class="contato-info">
+                        <h2>Contato</h2>
+                        <p>Se você deseja entrar em contato comigo, sinta-se à vontade para usar o formulário abaixo ou me seguir nas redes sociais.</p>
+                        <div class="contato-detalhes">
+                            <p><i class="ri-phone-line"></i> +55 12 3456-7890</p>
+                            <p><i class="ri-mail-line"></i> thomas@example.com</p>
+                        </div>
+                        <div class="logos">
+                            <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                                <i class="ri-linkedin-box-fill"></i>
+                            </a>
+                            <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+                                <i class="ri-github-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contato-form">
+                        <h3>Envie uma Mensagem</h3>
+                        <form action="#" method="post">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                            <input type="email" name="email" placeholder="Seu Email" required>
+                            <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                            <button type="submit" class="botao">Enviar</button>
+                        </form>
+                    </div>
+                </div>
             </section>
+            
         </main>
     </div>
 </div>

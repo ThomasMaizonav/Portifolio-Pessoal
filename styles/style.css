@@ -1,5 +1,3 @@
-/* style.css */
-
 * {
     padding: 0;
     margin: 0;
@@ -34,13 +32,16 @@ body {
     align-items: center;
     background-color: #009688;
     height: 100%;
+    margin-right: 20px;
+    padding-left: 40px;
 }
 
 .imagem img {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 50%;
     opacity: 0.85;
+    margin-left: 110px;
 }
 
 .right-side {
@@ -91,6 +92,22 @@ p {
     color: #CCCCCC;
 }
 
+.progress-bar {
+    width: 50%;
+    background-color: #555555; /* Cor de fundo da barra */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px; /* Espaçamento entre as barras */
+    text-align: center;
+}
+
+.progress {
+    height: 20px;
+    background-color: #009688; /* Cor da barra de progresso */
+    border-radius: 10px;
+    color: #282828;
+}
+
 .logos i {
     font-size: 36px;
     margin: 0 10px;
@@ -103,7 +120,16 @@ p {
     color: #009688;
 }
 
+.country-flag {
+    width: 24px; 
+    height: auto; 
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
 .linguagens {
+    width: 85%;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -227,26 +253,166 @@ p {
     transform: translateY(-3px);
 }
 
-.invertido {
+/*Começa o sobre mim*/
+/* Estilos para a seção "Sobre Mim" */
+.sobre-mim {
+    background-color: #282828; /* Fundo escuro */
+    padding: 60px 20px; /* Espaçamento interno */
     display: flex;
-    flex-direction: row-reverse;
-    height: 100%;
+    align-items: center;
+    justify-content: center; /* Alinha o conteúdo centralmente */
+    gap: 30px; /* Espaçamento entre texto e imagem */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o container */
 }
 
-.sobremim-section {
-    padding: 40px;
+.sobre-mim-texto {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    color: #CCCCCC;
+    max-width: 600px; /* Limita a largura do texto */
+}
+
+.sobre-mim-texto h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+.sobre-mim-texto h3 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.sobre-mim-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.sobre-mim-imagem {
+    flex: 0 0 300px; /* Largura fixa para a imagem */
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin-right: 200px; /* Aumente esse valor para afastar mais o texto */
+    align-items: center;
 }
 
-.sobremim-section img{
+.sobre-mim-imagem img {
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    transition: transform 0.3s ease; /* Transição para o efeito de hover */
+}
+
+.sobre-mim-imagem img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/*A partir daqui os projetos*/
+
+/*A partir daqui os contatos*/
+.contato-info {
+    text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.left-side {
-    margin-right: 80px; /* Ajuste este valor para mover mais a imagem e afastar o texto */
+.contato-info h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #009688;
+    margin-bottom: 20px;
 }
 
+.contato-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contato-detalhes {
+    margin-bottom: 20px;
+}
+
+.contato-detalhes p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contato-detalhes i {
+    color: #009688;
+    margin-right: 10px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logos a {
+    color: #FFFFFF;
+    font-size: 36px;
+    transition: color 0.3s;
+}
+
+.logos a:hover {
+    color: #009688;
+}
+
+.contato-form {
+    max-width: 600px; /* Limita a largura do formulário */
+    margin: 0 auto;
+}
+
+.contato-form h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contato-form input {
+    background-color: #444;
+    color: #FFFFFF;
+}
+
+.contato-form textarea {
+    background-color: #444;
+    color: #FFFFFF;
+}
+
+.contato-form button {
+    background-color: #009688;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contato-form button:hover {
+    background-color: #00796B;
+    transform: translateY(-2px);
+}
