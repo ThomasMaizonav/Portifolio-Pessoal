@@ -8,55 +8,62 @@ body {
     background-color: rgb(34, 34, 34);
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    height: 100vh; /* Ajusta a altura do body para ocupar 100% da tela */
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {
     display: flex;
-    width: 100vw; /* Ajusta a largura para ocupar 100% da tela */
-    height: 100vh; /* Ajusta a altura para ocupar 100% da tela */
-    background-color: #282828;
+    width: 100%;
+    height: 100vh; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
 
 .left-side {
     flex: 1;
     display: flex;
-    padding: 10px;
+    padding: 20px;
     justify-content: center;
     align-items: center;
     background-color: #009688;
-    height: 100%;
+    border-radius: 10px;
     margin-right: 20px;
-    padding-left: 40px;
 }
 
 .imagem img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
-    opacity: 0.85;
-    margin-left: 110px;
+    border-radius: 40%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.imagem img:hover {
+    transform: scale(1.05);
 }
 
 .right-side {
     flex: 2;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+}
+
+.right-side nav {
+    text-align: start; /* Centraliza os links horizontalmente */
 }
 
 .right-side a {
+    display: inline-block;
     color: #009688;
     font-size: 18px;
     text-decoration: none;
-    margin-right: 20px;
+    margin: 0 10px; /* Ajuste o valor para o espaçamento desejado */
     transition: color 0.3s;
 }
 
@@ -154,7 +161,7 @@ p {
     font-size: 28px;
     opacity: 0.2;
     transform: scale(0.5);
-    transition: opacity 0.5, transform 0.5 ease;
+    transition: opacity 0.5s, transform 0.5s ease;
 }
 
 .linguagens div:hover i {
@@ -253,21 +260,20 @@ p {
     transform: translateY(-3px);
 }
 
-/*Começa o sobre mim*/
-/* Estilos para a seção "Sobre Mim" */
+/* Ajustes para a seção Sobre Mim */
 .sobre-mim {
-    background-color: #282828; /* Fundo escuro */
-    padding: 60px 20px; /* Espaçamento interno */
-    display: flex;
+    display: flex; 
     align-items: center;
-    justify-content: center; /* Alinha o conteúdo centralmente */
+    justify-content: space-between; /* Alinha o texto e a imagem aos extremos do container */
     gap: 30px; /* Espaçamento entre texto e imagem */
+    padding: 70px;
     max-width: 1200px; /* Largura máxima */
     margin: 0 auto; /* Centraliza o container */
+    flex-direction: row; 
 }
 
 .sobre-mim-texto {
-    flex: 1; /* Faz o texto ocupar o espaço restante */
+    flex: 1; 
     color: #CCCCCC;
     max-width: 600px; /* Limita a largura do texto */
 }
@@ -292,14 +298,17 @@ p {
 }
 
 .sobre-mim-imagem {
-    flex: 0 0 300px; /* Largura fixa para a imagem */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    background-color: #009688;
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
 .sobre-mim-imagem img {
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 8px; 
     width: 100%;
     height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
@@ -307,17 +316,34 @@ p {
 }
 
 .sobre-mim-imagem img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
-/*A partir daqui os projetos*/
+/* Ajustes para a seção de Contato */
+.contato {
+    padding: 60px 20px;
+    background-color: rgb(34, 34, 34);
+}
 
-/*A partir daqui os contatos*/
 .contato-info {
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 40px; /* Espaçamento abaixo da seção de informações */
 }
+
+.contato-info h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+.contato-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #CCCCCC;
+}
+
+
 
 .contato-info h2 {
     font-size: 36px;
@@ -334,11 +360,6 @@ p {
 
 .contato-detalhes {
     margin-bottom: 20px;
-}
-
-.contato-detalhes p {
-    font-size: 18px;
-    margin: 10px 0;
 }
 
 .contato-detalhes i {
@@ -363,8 +384,13 @@ p {
 }
 
 .contato-form {
-    max-width: 600px; /* Limita a largura do formulário */
-    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+    max-width: none; /* Limita a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    background-color: #2c2c2c; /* Fundo diferente para destacar o formulário */
+    border-radius: 10px; /* Bordas arredondadas para suavizar o design */
 }
 
 .contato-form h3 {
@@ -415,4 +441,17 @@ p {
 .contato-form button:hover {
     background-color: #00796B;
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-side, .right-side {
+        margin-right: 0;
+        padding-left: 0;
+    }
+    .linguagens {
+        flex-direction: column;
+    }
 }
