@@ -345,6 +345,7 @@ p {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .project-card img {
@@ -369,14 +370,20 @@ p {
 }
 
 .project-card:hover .overlay {
-    opacity: 1; 
+    background-color: #000000; /* Torna o fundo mais escuro */
+    opacity: 0.7; /* Aumenta a opacidade para maior contraste */
 }
 
 .overlay a {
-    color: #fff; /* Cor do texto dentro do overlay para melhor contraste */
+    color: #009688; /* Cor do texto dentro do overlay para melhor contraste */
     text-decoration: none;
     margin: 5px 0;
     font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffffff;
+    padding: 2px;
 }
 
 .section-title {
@@ -517,5 +524,101 @@ p {
     }
     .linguagens {
         flex-direction: column;
+    }
+}
+
+/* Ajustes para telas de tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura para conteúdo dinâmico */
+        padding: 10px;
+    }
+
+    .left-side {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .sobre-mim-texto {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sobre-mim-imagem {
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .contato-form {
+        padding: 20px;
+    }
+}
+
+/* Ajustes para telas de celulares (até 767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .right-side {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .sobre-mim-texto {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .sobre-mim-imagem {
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .contato-form {
+        padding: 20px 10px;
     }
 }
