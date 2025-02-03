@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const dynamicText = document.getElementById("dynamic-text")
-    const texts = ["Desenvolvedor Web", "Estudante de TI", "Freelancer", "Desenvolvedor Júnior", "Desenvolvedor FullStack"]
+    const texts = ["Desenvolvedor Web", "Estudante de TI", "Freelancer", "Programador", "Desenvolvedor FullStack", "Estudante de ADS"]
     let index = 0
     let charIndex = 0
     let isDeleting = false
